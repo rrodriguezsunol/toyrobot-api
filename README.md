@@ -36,13 +36,24 @@ Feel free to add additional files. The output will be displayed in the console.
 
 This mode allow to create and control multiple robots. They are stored in the memory while the API is running. This could be replaced with a DB to persist the state, however, this is outside the scope of this task. Each robot has a unique ID that should be used to control it.
 
-To run the app in the API mode use the following command:
+#### Run with Docker
+
+`docker network create traefik_proxy`
+
+`docker-compose up -d`
+
+
+#### Run without Docker
 
 `java -jar build/libs/toyrobot-0.1.0.jar `
 
 To specify grid size other than 5x5:
 
 `java -jar build/libs/toyrobot-0.1.0.jar --gridSizeX=8 --gridSizeY=6`
+
+#### Note
+
+The app will be accessible on port 8080
 
 #### Robot object
 

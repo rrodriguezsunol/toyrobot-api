@@ -1,0 +1,22 @@
+version: "3"
+
+services:
+
+  api:
+    build: .
+    container_name: toyrobot-api
+    restart: always
+    working_dir: /app
+    networks:
+      - traefik_proxy
+    ports:
+      - "8080:8080"
+    labels:
+      - "traefik.docker.network=traefik_proxy"
+      - "traefik.enable=true"
+      - "traefik.port=8080"
+      - "traefik.frontend.rule=Host:${DOMAIN},www.${DOMAIN}"
+
+networks:
+  traefik_proxy:
+    external: true
