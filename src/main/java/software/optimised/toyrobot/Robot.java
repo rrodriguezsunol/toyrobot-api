@@ -41,13 +41,13 @@ public class Robot {
   }
 
   public Robot right() {
-    orientation = orientation.right();
+    if (orientation != null) orientation = orientation.right();
 
     return this;
   }
 
   public Robot left() {
-    orientation = orientation.left();
+    if (orientation != null) orientation = orientation.left();
 
     return this;
   }

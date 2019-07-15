@@ -32,6 +32,12 @@ Feel free to add additional files. The output will be displayed in the console.
 |        move        |
 |        report      |
 
+#### Local Mode with Docker
+
+`docker network create traefik_proxy`
+
+`docker-compose run api java -jar build/libs/toyrobot-0.1.0.jar --file="robot_instructions_1.txt"`
+
 ### API mode
 
 This mode allow to create and control multiple robots. They are stored in the memory while the API is running. This could be replaced with a DB to persist the state, however, this is outside the scope of this task. Each robot has a unique ID that should be used to control it.
@@ -50,6 +56,10 @@ This mode allow to create and control multiple robots. They are stored in the me
 To specify grid size other than 5x5:
 
 `java -jar build/libs/toyrobot-0.1.0.jar --gridSizeX=8 --gridSizeY=6`
+
+or
+
+`docker-compose run api java -jar build/libs/toyrobot-0.1.0.jar --gridSizeX=8 --gridSizeY=6`
 
 #### Note
 
