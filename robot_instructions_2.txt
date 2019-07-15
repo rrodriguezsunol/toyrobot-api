@@ -1,0 +1,15 @@
+place 3,3,WEST
+move
+report
+right
+move
+move
+report
+move
+move
+move
+move
+move
+move
+right
+report

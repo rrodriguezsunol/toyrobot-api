@@ -1,0 +1,6 @@
+report
+move
+place -1,0,SOUTH
+place 2,2,CENTER
+move
+report
